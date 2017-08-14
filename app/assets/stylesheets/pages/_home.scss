@@ -3,7 +3,6 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 .banner-home {
-  color: white;
   text-align: center;
   height: calc(100vh - 152px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -11,6 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: grey;
+  position: fixed;
+  top: 50%; left: 50%;
+  z-index: -1;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+
+
 
   h1 {
   font-size: 60px;
@@ -29,12 +37,11 @@
 
 .banner-content {
   z-index: 2;
+  color: white;
 }
 
 .banner-cta a.btn {
   margin: 0 10px;
 }
 
-.content-home {
-  width: 300px;
-}
+

@@ -1,22 +1,9 @@
 <div class="banner-home" >
-  <div class="video">
-    <video autoplay loop>
-    <source src: url(<%= video_tag("http://res.cloudinary.com/hw3i/video/upload/v1497524313/Frida_home_ckjz3x.mp4")%>)>
-    </video>
-  </div>
   <div class="banner-content">
     <h1>the online art school</h1>
-      <br>
-      <div class="banner-cta">
-        <%= link_to "HOW IT WORKS", courses_path, class: "btn btn-frida" %>
-        <% if user_signed_in? %>
-          <% if current_user.teacher %>
-            <%= link_to "TEACH", new_course_path, class: "btn btn-frida" %>
-          <% end %>
-        <% end %>
-      </div>
   </div>
 </div>
+
 
 <%= content_for(:navbar, "navbar-home") %>
 <%= content_for(:logo, "logo copy white.png") %>
