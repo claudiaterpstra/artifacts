@@ -4,8 +4,8 @@ $("#button").click(function() {
     }, 2000);
 });
 
-$("#button-home-age").click(function() {
+$("#button-home-page").click(function() {
     $('html, body').animate({
-        scrollTop: $("#instructions").offset().top
-    }, 2000);
+        scrollTop: $("#button-scroll").offset().top
+    }, 1500);
 });

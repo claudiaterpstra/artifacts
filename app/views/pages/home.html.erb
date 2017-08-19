@@ -1,17 +1,83 @@
-<div class="container">
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,100,200,0.5) 0%, rgba(0,36,61,0.3) 50%), url('http://res.cloudinary.com/do6jihcuc/image/upload/v1503141529/materials_cbtqpf.jpg');">
-    <div class="banner-content">
-      <h1>the online art school</h1>
-      <p>Learn to paint with us</p>
-      <input type="button-home-page", id="button", class="btn btn-frida", value="Hoe het werkt"/>
+<div class="wrapper-banner">
+    <div class="container">
+      <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,100,200,0.5) 0%, rgba(0,36,61,0.3) 50%), url('http://res.cloudinary.com/do6jihcuc/image/upload/v1503141529/materials_cbtqpf.jpg');">
+        <div class="banner-content">
+          <h1>the online art school</h1>
+          <p>Be creative & learn to paint with us</p>
+          <input type="button", id="button-home-page", class="btn btn-frida", value="How it works"/>
+        </div>
+      </div>
     </div>
-  </div>
+</div>
 
-  <div id="button-scroll"></div>
-  <div class="instructions">
-    <h2>hello</h2>
+<div class="wrapper-grey">
+  <div class="container">
+    <h3><strong>From beginners to more advanced, we have a wealth of classes</strong></h3>
+    <p>Get to know all great artists we have. We offer courses for beginners and more advanced painters.
+    <p>
   </div>
 </div>
+
+<div class="wrapper-grey-cards">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/do6jihcuc/image/upload/v1500832839/gmcjx3mmji43jfoc1fr3.jpg');">
+        <div class="card-description">
+        <h2>Watercolour</h2>
+        </div>
+        <%= link_to "", courses_path, class: "card-link"  %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/do6jihcuc/image/upload/v1500832839/gmcjx3mmji43jfoc1fr3.jpg');">
+        <div class="card-description">
+        <h2>Watercolour</h2>
+        </div>
+        <%= link_to "", courses_path, class: "card-link"  %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/do6jihcuc/image/upload/v1500832839/gmcjx3mmji43jfoc1fr3.jpg');">
+        <div class="card-description">
+        <h2>Watercolour</h2>
+        </div>
+        <%= link_to "", courses_path, class: "card-link"  %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="wrapper-instructions">
+  <div id="button-scroll"></div>
+   <div class="container">
+      <div class="row">
+       <div class="col-xs-6">
+        <video width="500" height="300" autoplay loop>
+          <source src: url(<%= video_tag("http://res.cloudinary.com/hw3i/video/upload/v1497524313/Frida_home_ckjz3x.mp4")%>
+        </video>
+        </div>
+          <div class="col-xs-6 instructions">
+          <li list-inline>
+            <ul>
+            <strong>Subscribe</strong> for the course you always wanted to do. Frida offers various categories for beginners and more advanced painters. Go to our <strong>shop</strong> to get all started!</p>
+            </ul>
+            <ul>
+            <p>Start the video and create a masterpiece! Take <strong>pictures</strong> of your artworks and upload them in your studio</p>
+            </ul>
+            <ul>
+          <p>Ask your teacher for <strong>feedback</strong>. Don't hesitate to start a conversation with your teacher!</p>
+          </ul>
+          </li>
+        </div>
+      </div>
+     </div>
+  </div>
+
+
+
 
 <%= content_for(:navbar, "navbar-home") %>
 <%= content_for(:logo, "logo copy white.png") %>
