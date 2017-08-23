@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170809205229) do
+ActiveRecord::Schema.define(version: 20170823091224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -151,6 +151,11 @@ ActiveRecord::Schema.define(version: 20170809205229) do
     t.datetime "token_expiry"
     t.text     "biodata"
     t.boolean  "teacher",                default: false
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "dribbble"
+    t.string   "github"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
