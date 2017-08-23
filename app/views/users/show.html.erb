@@ -16,11 +16,21 @@
         </div>
 
       <div class="user-details">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-dribbble" aria-hidden="true"></i>
-        <i class="fa fa-github-alt" aria-hidden="true"></i>
+       <% if current_user.facebook != nil %>
+            <%= link_to '<i class="fa fa-facebook"></i>'.html_safe, current_user.facebook, target: :_blank %>
+        <% end %>
+         <% if current_user.twitter != nil %>
+            <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, current_user.twitter, target: :_blank %>
+        <% end %>
+        <% if current_user.instagram != nil %>
+        <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, current_user.instagram, target: :_blank %>
+        <% end %>
+        <% if current_user.dribbble != nil %>
+        <%= link_to '<i class="fa fa-dribbble"></i>'.html_safe, current_user.dribbble, target: :_blank %>
+        <% end %>
+        <% if current_user.github != nil %>
+         <%= link_to '<i class="fa fa-github-alt"></i>'.html_safe, current_user.github, target: :_blank %>
+         <% end %>
         <br>
         <p>Member Since: <%= @user.created_at.strftime("%e %B %Y") %></p>
         <% if @user == current_user  %>

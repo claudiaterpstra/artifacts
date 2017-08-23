@@ -31,6 +31,9 @@ gem 'coffee-rails'
 gem 'money-rails' #to display price in different currencies
 gem 'stripe' #accept payments
 
+#StripAttributes
+gem "strip_attributes"
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

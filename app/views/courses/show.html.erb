@@ -98,21 +98,21 @@
               <p><%= @course.user.biodata %></p>
 
               <div class="artist-socials">
-              <% if @course.user.facebook != "" %>
+              <% if @course.user.facebook != nil %>
                   <%= link_to '<i class="fa fa-facebook"></i>'.html_safe, @course.user.facebook, target: :_blank %>
               <% end %>
-                  <% if @course.user.twitter != "" %>
-                  <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, @course.user.twitter, target: :_blank %>
-                  <% end %>
-                  <% if @course.user.instagram != "" %>
-                  <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, @course.user.instagram, target: :_blank %>
-                  <% end %>
-                  <% if @course.user.dribbble != "" %>
-                  <%= link_to '<i class="fa fa-dribbble"></i>'.html_safe, @course.user.dribbble, target: :_blank %>
-                  <% end %>
-                  <% if @course.user.github != "" %>
-                   <%= link_to '<i class="fa fa-github-alt"></i>'.html_safe, @course.user.github, target: :_blank %>
-                   <% end %>
+              <% if @course.user.twitter != nil %>
+              <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, @course.user.twitter, target: :_blank %>
+              <% end %>
+              <% if  @course.user.instagram != nil %>
+              <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, @course.user.instagram, target: :_blank %>
+              <% end %>
+              <% if @course.user.dribbble != nil %>
+              <%= link_to '<i class="fa fa-dribbble"></i>'.html_safe, @course.user.dribbble, target: :_blank %>
+              <% end %>
+              <% if @course.user.github != nil %>
+               <%= link_to '<i class="fa fa-github-alt"></i>'.html_safe, @course.user.github, target: :_blank %>
+               <% end %>
               </div>
               <hr>
               <p>Got questions about the course?</p>
