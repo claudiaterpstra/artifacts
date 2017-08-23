@@ -24,13 +24,17 @@
           <p>Amount: <%= humanized_money_with_symbol(course.price) %></p>
           <div class="course-rating">
           <p>
-            Frida Says:
-            <% course.rating.times do |rating| %>
+          <% if course.course_reviews == [] %>
+            No reviews yet
+          <% else %>
+            <% course.average_rating.times do |rating| %>
               <i class="fa fa-heart" aria-hidden="true"></i>
             <% end %>
-            <% (5 - course.rating).times do |rating| %>
+            <% (5 - course.average_rating).times do |rating| %>
               <i class="fa fa-heart-o" aria-hidden="true"></i>
             <% end %>
+            <%= pluralize course.course_reviews.count, "review" %>
+          <% end %>
           </p>
           </div>
         </div>

@@ -21,10 +21,11 @@ class Course < ApplicationRecord
     if course_reviews.count > 0
       rating_array = []
       course_reviews.each do |review|
-        rating_array << review.rating
+        rating_array << review.rating.to_f
       end
       total = rating_array.inject(:+)
       average_rating = total / course_reviews.count
+      average_rating.ceil
     else
       average_rating = 0
     end
