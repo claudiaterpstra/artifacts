@@ -98,11 +98,21 @@
               <p><%= @course.user.biodata %></p>
 
               <div class="artist-socials">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-dribbble" aria-hidden="true"></i>
-                <i class="fa fa-github-alt" aria-hidden="true"></i>
+              <% if @course.user.facebook != "" %>
+                  <%= link_to '<i class="fa fa-facebook"></i>'.html_safe, @course.user.facebook, target: :_blank %>
+              <% end %>
+                  <% if @course.user.twitter != "" %>
+                  <%= link_to '<i class="fa fa-twitter"></i>'.html_safe, @course.user.twitter, target: :_blank %>
+                  <% end %>
+                  <% if @course.user.instagram != "" %>
+                  <%= link_to '<i class="fa fa-instagram"></i>'.html_safe, @course.user.instagram, target: :_blank %>
+                  <% end %>
+                  <% if @course.user.dribbble != "" %>
+                  <%= link_to '<i class="fa fa-dribbble"></i>'.html_safe, @course.user.dribbble, target: :_blank %>
+                  <% end %>
+                  <% if @course.user.github != "" %>
+                   <%= link_to '<i class="fa fa-github-alt"></i>'.html_safe, @course.user.github, target: :_blank %>
+                   <% end %>
               </div>
               <hr>
               <p>Got questions about the course?</p>
