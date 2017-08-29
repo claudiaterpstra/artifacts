@@ -1,17 +1,31 @@
-<%= simple_form_for @user, class: 'form-inline' do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :biodata, label: 'Bio' %>
-  <%= f.input :facebook %>
-  <%= f.input :twitter %>
-  <%= f.input :instagram %>
-  <%= f.input :dribbble %>
-  <%= f.input :github %>
-  <div class="input-group">
-    <i class="fa fa-upload" aria-hidden="true"></i>
-  <%= f.input :photo, as: :attachinary, label: 'Upload a photo...', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>
-  </div>
+<% if @user.teacher == true %>
+  <%= simple_form_for @user, class: 'form-inline' do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :biodata, label: 'Bio' %>
+    <%= f.input :facebook %>
+    <%= f.input :twitter %>
+    <%= f.input :instagram %>
+    <%= f.input :dribbble %>
+    <%= f.input :github %>
+    <div class="input-group">
+      <i class="fa fa-upload" aria-hidden="true"></i>
+    <%= f.input :photo, as: :attachinary, label: 'Upload a photo', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-frida" %>
+  <% end %>
+<% else %>
+  <%= simple_form_for @user, class: 'form-inline' do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :biodata, label: 'Bio' %>
+    <div class="input-group">
+      <i class="fa fa-upload" aria-hidden="true"></i>
+    <%= f.input :photo, as: :attachinary, label: 'Upload a photo', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>
+    </div>
 
-  <%= f.submit "Submit", class: "btn btn-frida" %>
+    <%= f.submit "Submit", class: "btn btn-frida" %>
+  <% end %>
 <% end %>
