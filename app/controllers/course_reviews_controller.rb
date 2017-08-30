@@ -6,9 +6,15 @@ class CourseReviewsController < ApplicationController
     @course_review.user = current_user
     @course_review.course = @course
     if @course_review.save
-      redirect_to course_path(@course)
-    else
-      render 'courses/show'
+      respond_to do |format|
+        format.html { redirect_to course_path(@course) }
+        format.js
+      end
+      else
+      respond_to do |format|
+        format.html { render 'courses/show' }
+        format.js
+      end
     end
   end
 

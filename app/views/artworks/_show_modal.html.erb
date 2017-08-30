@@ -37,12 +37,10 @@
           <% end %>
           </div>
         <hr>
+
         <div class="feedbacks-<%= artwork.id %>">
         <% artwork.feedbacks.each do |feedback| %>
-
-
           <% if feedback.author == feedback.student %>
-
             <div class="p-left">
               <div class="feedback-img">
                 <%= unique_image_tag(feedback.author, :width=>40, :height=>40, :gravity=>"face", :radius=>"max", :crop=>"fill") %>
@@ -53,7 +51,6 @@
               </div>
             </div>
           <% elsif feedback.author == feedback.teacher %>
-
             <div class="p-right">
               <div class="feedback-content">
                 <%= feedback.content  %>

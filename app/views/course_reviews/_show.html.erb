@@ -1,0 +1,16 @@
+<div class="course-reviews">
+  <% @course.course_reviews.each do |r| %>
+  <p>
+    <%= r.user.full_name %> says:
+    <% r.rating.times do %>
+    <i class="fa fa-heart" aria-hidden="true"></i>
+    <% end %>
+    <% (5 - r.rating).times do %>
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+    <% end %>
+  </p>
+  <p class="review-content"><%= r.content %></p>
+  <br>
+  <% end %>
+</div>
+

@@ -124,7 +124,6 @@
           <p>what our users say</p>
           <h2>Course Reviews</h2>
         </div>
-        <div class="course-reviews">
           <div class="average-rating-show">
             <% if @course.average_rating > 0 %>
             <h3>Average User Rating:</h3>
@@ -139,30 +138,18 @@
             <% else %>
             <p>No reviews yet!</p>
             <% end %>
+            </div>
 
-            <% @course.course_reviews.each do |r| %>
-            <p>
-              <%= r.user.full_name %> says:
-              <% r.rating.times do %>
-              <i class="fa fa-heart" aria-hidden="true"></i>
-              <% end %>
-              <% (5 - r.rating).times do %>
-              <i class="fa fa-heart-o" aria-hidden="true"></i>
-              <% end %>
-            </p>
-            <p class="review-content"><%= r.content %></p>
-            <br>
-            <% end %>
+            <%= render 'course_reviews/show', locals: {course: @course} %>
 
             <% if user_signed_in? %>
             <% current_user.participations.each do |participation| %>
             <% if participation.course == @course %>
             <div class="course_review_form">
               <h3>Add A Review</h3>
-              <%= simple_form_for [@course, @course_review], class: 'form-inline' do |f| %>
-              <%= f.input :rating, collection: 1..5 %>
-              <%= f.input :content, label: 'Review', as: :text %>
-
+              <%= simple_form_for [@course, @course_review], remote: true, class: 'form-inline' do |f| %>
+              <%= f.input :rating, collection: 1..5, input_html: {class: "course-review-input"} %>
+              <%= f.input :content, label: 'Review', as: :text, input_html: {class: "course-review-input"} %>
               <%= f.submit "Add A Review", class: "btn btn-frida" %>
               <% end %>
               <% end %>

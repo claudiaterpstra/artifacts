@@ -1,0 +1,9 @@
+  // Create a paragraph for the new review. But hide it.
+  var new_course_review = $("<%= j render 'course_reviews/show', course: @course %>").hide();
+  // Add it to the DOM, at the end of the existing reviews. It's still hidden.
+  $('.course-reviews').append(new_course_review);
+  // Show the new review with an animation!
+  new_course_review.slideDown();
+  // Reset the form
+  $('.course-review-input').val('');
+
