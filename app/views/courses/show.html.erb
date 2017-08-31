@@ -116,7 +116,7 @@
               </div>
               <hr>
               <p>Got questions about the course?</p>
-              <%= link_to "Message #{@course.user.first_name}", courses_path, class: "btn btn-frida" %>
+              <%= mail_to @course.user.email, "Message #{@course.user.first_name}", class: "btn btn-frida" %>
             </div>
           </div>
         </div>
