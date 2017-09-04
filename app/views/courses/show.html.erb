@@ -42,21 +42,22 @@
             <% else %>
               <%= render 'courses/shared/bookcoursebutton' %>
             <% end %>
-          </div>
-          <div class="course-rating">
-            <% if @course.rating > 0 %>
-            <%= image_tag "frida-icon.png", {class: "show-card-image"}%>
-            <p>Frida Says</p>
-            <% @course.rating.times do |rating| %>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <% end %>
-            <% (5 - @course.rating).times do |rating| %>
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
-            <% end %>
-            <% else %>
+              <div class="course-rating-show">
+              <p>
+              <% if @course.course_reviews == [] %>
+                No reviews yet!
+              <% else %>
+                <% @course.average_rating.times do |rating| %>
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                <% end %>
+                <% (5 - @course.average_rating).times do |rating| %>
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <% end %>
+                <%= pluralize @course.course_reviews.count, "review" %>
+              <% end %>
+              </p>
+              </div>
             <br>
-            <p>No rating by Frida yet!</p>
-            <% end %>
           </div>
         </div>
       </div>

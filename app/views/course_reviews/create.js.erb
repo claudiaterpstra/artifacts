@@ -1,3 +1,7 @@
+  <% if @course_review.errors.any? %>
+  // Render new review form with errors
+  $('#new_courseoverview').html("<%= j render 'course_overview/form', course: @course %>");
+  <% else %>
   // Create a paragraph for the new review. But hide it.
   var new_course_review = $("<%= j render 'course_reviews/show', course: @course %>").hide();
   // Add it to the DOM, at the end of the existing reviews. It's still hidden.
@@ -6,3 +10,4 @@
   new_course_review.slideDown();
   // Reset the form
   $('.course-review-input').val('');
+  <% end %>
