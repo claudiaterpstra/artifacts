@@ -80,6 +80,9 @@
     <% else %>
 
       <!-- Login text link -->
+
+      <%= link_to t(".sign_up", default: "Aanmelden"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
       <%= link_to t(".sign_in", default: "Inloggen"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>

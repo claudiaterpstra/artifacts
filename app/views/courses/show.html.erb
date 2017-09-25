@@ -147,11 +147,11 @@
             <% current_user.participations.each do |participation| %>
             <% if participation.course == @course %>
             <div class="course_review_form">
-              <h3>Add A Review</h3>
+              <h3>Voeg een recensie toe!</h3>
               <%= simple_form_for [@course, @course_review], remote: true, class: 'form-inline' do |f| %>
               <%= f.input :rating, collection: 1..5, input_html: {class: "course-review-input"} %>
               <%= f.input :content, label: 'Review', as: :text, input_html: {class: "course-review-input"} %>
-              <%= f.submit "Add A Review", class: "btn btn-frida" %>
+              <%= f.submit "Versturen", class: "btn btn-frida" %>
               <% end %>
               <% end %>
             </div>
