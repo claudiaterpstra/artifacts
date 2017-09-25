@@ -25,9 +25,8 @@
 
 
 .wrapper-grey {
-  height: 150vh;
+  height: 120vh;
   background-color: #f9f9f9;
-  text-align: center;
   position: relative;
   margin-top: -230px;
   padding-top: 200px;
@@ -42,6 +41,7 @@
 video {
   margin-top: 55px;
   margin-right: 30px;
+  margin-left: 60px;
 }
 
 .card-user {
@@ -51,3 +51,58 @@ video {
   width: 40px;
   border-radius: 50%;
 }
+
+.first-instruction-card {
+  margin-top: 120px;
+  p {
+    font-size: 15px;
+  }
+}
+
+.instruction-card{
+  margin-left: 80px;
+  h3 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+.instruction-card2{
+  margin-right: 80px;
+  h3 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+.calendar-text {
+  margin-top: .3em;
+  color: $frida-white;
+}
+
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 1.5em;
+    vertical-align: middle;
+    color: $frida-red;
+}
+
+.fa-3x {
+    font-size: 1em;
+}
+
+.video-message {
+  margin-top: 55px;
+  margin-right: 80px;
+  font-size: 15px;
+}
+
