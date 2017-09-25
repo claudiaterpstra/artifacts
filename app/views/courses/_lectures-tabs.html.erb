@@ -11,18 +11,18 @@
           <div class="content-block block-skin-grey clearfix">
             <h2 class="content-block-title"><%= lecture.title %></h2>
               <p><%= lecture.description %></p>
-              <%= link_to "Edit this lecture", edit_lecture_path(lecture) %>
+              <%= link_to "Wijzig deze les", edit_lecture_path(lecture) %>
           </div>
       </div>
     <% end %>
     <% if @course.published == false %>
-      <%= link_to "Add your next lecture", new_course_lecture_path(@course) %>
-      <%= link_to "Publish this course", course_publish_path(@course), method: :patch %>
+      <%= link_to "Voeg een nieuwe les toe", new_course_lecture_path(@course) %>
+      <%= link_to "Maak dit programma openbaar", course_publish_path(@course), method: :patch %>
       <% else %>
-      <p>This course is now published</p>
+      <p>Dit programma is nu openbaar</p>
     <% end %>
   <% else %>
-    <%= link_to "Add your first lecture", new_course_lecture_path(@course) %>
+    <%= link_to "Voeg de eerste les toe", new_course_lecture_path(@course) %>
   <% end %>
 <% elsif  @course.published == true %>
   <% count = 1 %>
@@ -52,7 +52,7 @@
     </div>
   <% end %>
   <% else %>
-  <p>This course is not yet published</p>
+  <p>Dit programma is nog niet gepubliceerd</p>
 <% end %>
 
 

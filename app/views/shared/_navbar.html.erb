@@ -13,10 +13,10 @@
   <% end %>
 
     <!-- About link -->
-    <%= link_to "About", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Over Frida", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Courses link -->
-    <%= link_to "Courses", courses_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Programmas", courses_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
@@ -80,7 +80,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Inloggen"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
 

@@ -25,17 +25,17 @@
     <div class="col-lg-3 col-md-4 hide-sm" id="sticky">
       <div class="course-side-bar">
         <div class="course-side-info">
-          <h3>Amount: <%= humanized_money_with_symbol(@course.price) %></h3>
-          <p><%= @course.duration %> hours of video lessons </p>
+          <h3>Prijs: <%= humanized_money_with_symbol(@course.price) %></h3>
+          <p><%= @course.duration %> uur aan videos </p>
           <div class="course-side-btn">
             <% if user_signed_in? %>
               <% if @course.user == current_user %>
                 <%= link_to "Update", edit_course_path(@course), class: "btn btn-frida btn-teacher" %>
-                <%= link_to "Delete", course_path(@course), method: :delete, class: "btn btn-frida btn-teacher" %>
+                <%= link_to "Verwijder", course_path(@course), method: :delete, class: "btn btn-frida btn-teacher" %>
               <% elsif current_user.participates_to?(@course) && @course.price_pennies > 0  %>
-                You have purchased this course
+                Je hebt dit programma gekocht
               <% elsif current_user.participates_to?(@course) && @course.price_pennies.zero?  %>
-                You have joined this course
+                Je bent ingeschreven voor dit programma
               <% else %>
                 <%= render 'courses/shared/bookcoursebutton' %>
               <% end %>
@@ -45,7 +45,7 @@
               <div class="course-rating-show">
               <p>
               <% if @course.course_reviews == [] %>
-                No reviews yet!
+                Nog geen recensies!
               <% else %>
                 <% @course.average_rating.times do |rating| %>
                   <i class="fa fa-heart" aria-hidden="true"></i>
@@ -53,7 +53,7 @@
                 <% (5 - @course.average_rating).times do |rating| %>
                   <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <% end %>
-                <%= pluralize @course.course_reviews.count, "review" %>
+                <%= pluralize @course.course_reviews.count, "recensie" %>
               <% end %>
               </p>
               </div>
@@ -73,21 +73,21 @@
         <div id="button-scroll"></div>
         <div class="course-banner-title">
           <p>curriculum</p>
-          <h2>Course Lessons</h2>
+          <h2>Lessen</h2>
         </div>
         <div class="lectures-list">
           <%= render 'lectures-tabs', locals: {course: @course} %>
         </div>
         <div class="course-banner-title" id="course-banner-title-padding">
-          <p>things you'll need</p>
-          <h2>Course Materials</h2>
+          <p>benodigdheden</p>
+          <h2>Materialen</h2>
         </div>
         <div class="materials-list">
           <p><%= @course.materials %></p>
         </div>
         <div class="course-banner-title">
-          <p>meet the artist</p>
-          <h2>Your Course Instructor</h2>
+          <p>ontmoet de artiest</p>
+          <h2>Jouw creatieve instructeur</h2>
         </div>
         <div class="artist-profile">
           <div class="artist-first-row">
@@ -116,14 +116,14 @@
                <% end %>
               </div>
               <hr>
-              <p>Got questions about the course?</p>
-              <%= mail_to @course.user.email, "Message #{@course.user.first_name}", class: "btn btn-frida" %>
+              <p>Heb je vragen over het programma?</p>
+              <%= mail_to @course.user.email, "Mail #{@course.user.first_name}", class: "btn btn-frida" %>
             </div>
           </div>
         </div>
         <div class="course-banner-title">
-          <p>what our users say</p>
-          <h2>Course Reviews</h2>
+          <p>zij gingen je voor</p>
+          <h2>Recensies</h2>
         </div>
           <div class="average-rating-show">
             <% if @course.average_rating > 0 %>
@@ -137,7 +137,7 @@
               <% end %>
             </p>
             <% else %>
-            <p>No reviews yet!</p>
+            <p>Nog geen recensies!</p>
             <% end %>
             </div>
 
