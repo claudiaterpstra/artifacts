@@ -1,5 +1,0 @@
-<%= simple_form_for [course, course_review], remote: true, class: 'form-inline' do |f| %>
-<%= f.input :rating, collection: 1..5, input_html: {class: "course-review-input"} %>
-<%= f.input :content, label: 'Review', as: :text, input_html: {class: "course-review-input"} %>
-<%= f.submit "Add A Review", class: "btn btn-frida" %>
-<% end %>

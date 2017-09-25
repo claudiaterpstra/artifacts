@@ -3,7 +3,7 @@
   $('#new_courseoverview').html("<%= j render 'course_overview/form', course: @course %>");
   <% else %>
   // Create a paragraph for the new review. But hide it.
-  var new_course_review = $("<%= j render 'course_reviews/show', course: @course %>").hide();
+  var new_course_review = $("<%= j render 'course_reviews/show', course_review: @course_review %>").hide();
   // Add it to the DOM, at the end of the existing reviews. It's still hidden.
   $('.course-reviews').append(new_course_review);
   // Show the new review with an animation!

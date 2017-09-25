@@ -14,11 +14,6 @@
         </div>
 
       <div class="user-details">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-dribbble" aria-hidden="true"></i>
-        <i class="fa fa-github-alt" aria-hidden="true"></i>
         <p>Member Since: <%= @user.created_at.strftime("%e %B %Y") %></p>
         <p><%= link_to "View Public Profile", user_path(@user) %></p>
       </div>
@@ -46,14 +41,14 @@
 
 
       <div class="user-show-studio">
-        <h3>Your Studio</h3>
+        <h3>Jouw Studio</h3>
           <div class="user-studio-gallery carousel">
             <%= render 'shared/artworkcard' %>
           </div>
       </div>
 
       <div class="user-show-studio">
-        <h3>Your Enrolled Courses</h3>
+        <h3>Jouw Programmas</h3>
           <div class="user-studio-gallery carousel">
             <%= render 'shared/enrolledcoursecard' %>
 
@@ -61,7 +56,7 @@
       </div>
 
       <div class="user-dashboard-badges">
-        <h3>Your Frida Badges</h3>
+        <h3>Jouw Frida Badges</h3>
           <div class="achievement-badges">
             <div class="achievement-participation <%= current_user.one_participation? ? '' : 'achievement-locked' %>"></div>
             <div class="achievement-three-participations <%= current_user.three_participations? ? '' : 'achievement-locked' %>"></div>
