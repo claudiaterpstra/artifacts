@@ -4,7 +4,7 @@
         <div class="banner-content">
           <h1>de online creatieve studio</h1>
           <p>laat je creative kant zien, boek een online schildercursus </p>
-          <input type="button", id="button-home-page", class="btn btn-frida", value="Meer Frida"/>
+          <input type="button", id="button-home-page", class="btn btn-frida", value="Hoe werkt het?"/>
         </div>
       </div>
     </div>
@@ -12,6 +12,7 @@
 
 <div class="wrapper-grey">
   <div class="container">
+  <div id="button-scroll"></div>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="instruction-card first-instruction-card">
@@ -39,7 +40,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <div class="instruction-card">
+        <div class="instruction-card instruction-card3">
         <h3><span class="fa-stack fa-3x">
           <i class="fa fa-circle fa-stack-2x"></i>
           <strong class="fa-stack-1x calendar-text">3</strong>
@@ -48,25 +49,16 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
         </div>
       </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="instruction-card2">
+        <video width="500" height="300" autoplay loop>
+          <source src: url(<%= video_tag("http://res.cloudinary.com/do6jihcuc/video/upload/v1506440331/frida_trimmed7_tm9abs.mov")%>
+        </video>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="wrapper-instructions">
-  <div id="button-scroll"></div>
-   <div class="container">
-      <div class="row">
-       <div class="col-xs-6">
-        <video width="500" height="300" autoplay loop>
-          <source src: url(<%= video_tag("http://res.cloudinary.com/hw3i/video/upload/v1497524313/Frida_home_ckjz3x.mp4")%>
-        </video>
-        </div>
-        <div class="col-xs-6">
-          <p class= "video-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-     </div>
-  </div>
 
 
 

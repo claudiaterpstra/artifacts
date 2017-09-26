@@ -10,7 +10,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Artwork by: <%= artwork.user.full_name %></h4>
+        <h4 class="modal-title" id="myModalLabel">Kunstwerk van: <%= artwork.user.full_name %></h4>
       </div>
       <div class="modal-body">
         <div class="modal-heading">
@@ -26,13 +26,13 @@
           </div>
 
         <br>
-        <h4>Title: <%= artwork.message %></h4>
+        <h4>Titel: <%= artwork.message %></h4>
           <% if artwork.user == current_user %>
             <% if artwork.featured %>
             <h4><i class="fa fa-star" id="featured-star"></i>Featured on your Profile Page</h4>
-              <h4 class="featured-text"><%= link_to 'Click to remove from Profile Page'.html_safe, artwork_unfeature_path(artwork), method: :patch %></h4>
+              <h4 class="featured-text"><%= link_to 'Klik hier om dit kunstwerk te verwijderen van je profiel pagina'.html_safe, artwork_unfeature_path(artwork), method: :patch %></h4>
             <% else %>
-              <h4 class="featured-text"><%= link_to '<i class="fa fa-star-o" id="featured-star-o"></i> Click to feature on your Profile Page'.html_safe, artwork_feature_path(artwork), method: :patch %></h4>
+              <h4 class="featured-text"><%= link_to '<i class="fa fa-star-o" id="featured-star-o"></i> Klik hier om dit kunstwerk op je profiel pagina te zetten'.html_safe, artwork_feature_path(artwork), method: :patch %></h4>
             <% end %>
           <% end %>
           </div>

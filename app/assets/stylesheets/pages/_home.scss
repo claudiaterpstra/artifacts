@@ -25,7 +25,7 @@
 
 
 .wrapper-grey {
-  height: 120vh;
+  height: 150vh;
   background-color: #f9f9f9;
   position: relative;
   margin-top: -230px;
@@ -41,7 +41,7 @@
 video {
   margin-top: 55px;
   margin-right: 30px;
-  margin-left: 60px;
+  box-shadow: 5px;
 }
 
 .card-user {
@@ -68,6 +68,10 @@ video {
   p {
     font-size: 15px;
   }
+}
+
+.instruction-card3 {
+  margin-top: 130px;
 }
 
 .instruction-card2{
@@ -104,5 +108,9 @@ video {
   margin-top: 55px;
   margin-right: 80px;
   font-size: 15px;
+}
+
+.wrapper-white {
+  background-color: white;
 }
 
