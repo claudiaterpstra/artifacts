@@ -31,6 +31,22 @@
 
 .card-course-name p {
     font-size: 12px;
+    line-height: 1;
+}
+
+.difficulty-beginner {
+  color: #ED6A5A;
+  font-size: 13px;
+}
+
+.difficulty-average {
+  color: #63CCCA;
+  font-size: 13px;
+}
+
+.difficulty-hard {
+  color: #397367;
+  font-size: 13px;
 }
 
 .course-rating {
