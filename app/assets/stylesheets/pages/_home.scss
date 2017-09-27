@@ -25,10 +25,10 @@
 
 
 .wrapper-grey {
-  height: 150vh;
+  height: 45vh;
   background-color: #f9f9f9;
   position: relative;
-  margin-top: -230px;
+  margin-top: -235px;
   padding-top: 200px;
   z-index: -1;
 }
@@ -114,3 +114,31 @@ video {
   background-color: white;
 }
 
+.white-paragraph {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 15px;
+    font-style: italic;
+  }
+  img {
+    height: 30px;
+    padding-bottom: 5px;
+  }
+}
+
+.wrapper-grey2 {
+  background-color: #f9f9f9;
+  height: 120vh;
+}
+
+.paragraph {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

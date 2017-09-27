@@ -11,6 +11,19 @@
   }
 }
 
+.btn-blue {
+padding: 10px 30px;
+  font-size: 15px;
+  border-radius: 0px;
+  color: $frida-white;
+  background-color: #26547C;
+
+  &:hover {
+    background-color: $frida-grey;
+    color: $frida-white;
+  }
+}
+
 .btn-frida-form {
   padding: 15px;
   width: 100%;
