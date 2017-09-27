@@ -5,6 +5,7 @@
   <%= f.input :price, placeholder: 'What is the price of your course in £ ?' %>
   <%= f.input :materials, label: 'Course Materials', placeholder: 'What tools would you need?' %>
   <%= f.input :description, placeholder: 'How would you describe your course?' %>
+  <%= f.input :difficulty, collection: ["Beginner", "Gemiddeld", "Gevorderd"], placeholder: 'Wat is het niveau?' %>
   <div class="input-group">
     <i class="fa fa-upload" aria-hidden="true"></i>
     <%= f.input :photo, as: :attachinary, label: 'Upload a photo...', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>

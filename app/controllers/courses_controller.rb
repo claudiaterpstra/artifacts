@@ -66,6 +66,6 @@ before_action :set_course, only: [:show, :edit, :update, :destroy]
   end
 
   def course_params
-    params.require(:course).permit(:name, :category, :description, :price, :rating, :photo, :search, :materials, :duration)
+    params.require(:course).permit(:name, :category, :description, :price, :rating, :photo, :search, :materials, :duration, :difficulty)
   end
 end
