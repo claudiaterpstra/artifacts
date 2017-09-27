@@ -31,6 +31,8 @@ padding: 10px 30px;
   border-radius: 0px;
   color: $frida-white;
   background-color: $frida-red;
+  font-weight:  lighter;
+  font-family: "Helvetica";
 
   &:hover {
     background-color: $frida-grey;
@@ -77,6 +79,7 @@ padding: 10px 30px;
   font-size: 15px;
   border-radius: 0px;
   color: $frida-white;
+  font-weight: lighter;
   background-color: $frida-red;
 
   &:hover {

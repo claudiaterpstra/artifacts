@@ -115,7 +115,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-yahoo         { @include btn-social(#720e9e); }
 
 .fa-facebook.btn-facebook::before {
-    font: normal normal normal 14px/1 FontAwesome;
+    font: normal normal normal 15px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
