@@ -21,11 +21,20 @@
         <div class="card-course-name">
           <h2><%= course.name %></h2>
             <% if course.difficulty == "beginner" %>
-            <p class="difficulty-beginner">Beginner</p>
+            <p class="difficulty-beginner">
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            Beginner</p>
             <% elsif course.difficulty == "gemiddeld" %>
-            <p class="difficulty-average">Gemiddeld</p>
+            <p class="difficulty-average">
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            Gemiddeld</p>
             <% else %>
-            <p class="difficulty-hard">Gevorderd</p>
+            <p class="difficulty-hard">
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            Gevorderd</p>
           <% end %>
           <p>Artiest: <%= course.user.full_name %></p>
           <p>Prijs: <%= humanized_money_with_symbol(course.price) %></p>
