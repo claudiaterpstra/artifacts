@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :courses_participated, -> { distinct }, through: :participations, source: :course
   has_many :lectures_participated, -> { distinct }, through: :courses_participated, source: :lecture
   has_many :feedbacks, :class_name => "Feedback", :foreign_key => "author_id"
-  has_many :course_reviews
+  has_many :course_reviews, dependent: :destroy
   has_many :artworks
   has_many :notifications, dependent: :destroy
   has_attachment :photo
