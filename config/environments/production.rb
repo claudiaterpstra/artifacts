@@ -14,7 +14,7 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_options = { from: ENV['SENDMAIL_USERNAME'] }
+  config.action_mailer.default_options = { from: "terpstra.claudia@gmail.com" }
 
   config.action_mailer.raise_delivery_errors = true
 
