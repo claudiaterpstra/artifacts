@@ -7,15 +7,17 @@
         <br>
         <%= render "devise/shared/facebookaanmelden" %>
         <div class="line-text">
-        <p><span>or</span></p>
+        <p><span>of</span></p>
         </div>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%# f.error_notification %>
 
           <div class="form-inputs" >
-            <%= f.input :email, required: true, autofocus: true %>
-            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-            <%= f.input :password_confirmation, required: true %>
+            <%= f.input :first_name, label: 'Voornaam', required: true, autofocus: true %>
+            <%= f.input :last_name, label: 'Achternaam', required: true, autofocus: true %>
+            <%= f.input :email, label: 'E-mailadres', required: true, autofocus: true %>
+            <%= f.input :password, label: 'Wachtwoord', required: true, hint: ("minimum #{@minimum_password_length} karakters" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, label: 'Bevestig je wachtwoord', required: true %>
           </div>
 
           <div class="form-actions-btn">

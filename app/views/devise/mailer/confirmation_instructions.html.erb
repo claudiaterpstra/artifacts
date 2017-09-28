@@ -1,5 +1,9 @@
-<p>Welcome <%= @email %>!</p>
+<p>Welkom <%= @user.first_name %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Bevestig je account door op deze link te klikken</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to 'Bevestig mijn account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>Bedankt!
+<br>
+Het Frida Team</p>
