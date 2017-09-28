@@ -7,12 +7,14 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name:      ENV['SENDMAIL_USERNAME'],
     password:       ENV['SENDMAIL_PASSWORD'],
-    domain:         ENV['MAIL_HOST'],
+    domain:         ENV['heroku.com'],
     address:       'smtp.gmail.com',
     port:          '587',
     authentication: :plain,
     enable_starttls_auto: true
   }
+
+  config.action_mailer.default_options = { from: "terpstra.claudia@gmail.com" }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
