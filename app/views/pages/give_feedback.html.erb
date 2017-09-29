@@ -21,19 +21,19 @@
           <ul>
 
               <span class="artworks-filter-all <%= 'active' if params[:course].nil? && params[:lecture].nil? && params[:student].nil? %>"><li><%= link_to "View All Artwork (#{@user.student_artworks.count})", give_feedback_path %></li></span>
-              <h4>View by student:</h4>
+              <h4>Bekijk per student:</h4>
               <% @students.uniq.each do | student | %>
                 <span class="artworks-filter-names <%= 'active' if params[:student].to_i == student.id %>"><li><%= link_to "#{student.first_name} (#{@user.student_artworks.where(user: student).count})", give_feedback_path(student: student.id) %></li></span>
               <% end %>
 
-              <h4>View by course:</h4>
+              <h4>Bekijk per programma:</h4>
               <% @courses.uniq.each do | course | %>
                 <% if course.artworks.count > 0 %>
                 <span class="artworks-filter-names <%= 'active' if params[:course].to_i == course.id %>"><li><%= link_to "#{course.name} (#{course.artworks.count})", give_feedback_path(course: course.id) %></li></span>
                 <% end %>
               <% end %>
 
-              <h4>View by lecture:</h4>
+              <h4>Bekijk per les:</h4>
               <% @lectures.each do | lecture | %>
                 <% if lecture.artworks.count > 0 %>
                   <span class="artworks-filter-names <%= 'active' if params[:lecture].to_i == lecture.id %>"><li><%= link_to "#{lecture.title} (#{lecture.artworks.count})", give_feedback_path(lecture: lecture.id)
@@ -45,10 +45,10 @@
       </div>
 
     <div class="col-lg-9 col-md-8 col-sm-12 studio-right-column">
-      <h2>Give Feedback</h2>
-      <h4>Hey <%= @user.first_name %>! Manage all your student's artwork here and give them feedback by clicking on any image. Got a question? Hit us up help@frida.studio.</h4>
+      <h2>Geef feedback</h2>
+      <h4>Hey <%= @user.first_name %>! Beheer al de kunstwerken van jouw student hier. Geef feedback door op een kunstwerk te klikken. Heb je vragen? Laat het ons weten op XX</h4>
           <hr>
-      <h3>Students Artwork</h3>
+      <h3>Kunstwerken</h3>
       <% if @artworks.count > 0 %>
         <div class="flex-container-artworks">
           <% @artworks.sort_by(&:id).each do |artwork| %>
