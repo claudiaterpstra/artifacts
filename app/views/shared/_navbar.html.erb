@@ -60,17 +60,12 @@
                 <i class="fa fa-paint-brush"></i><%= t(".profile", default: "Dashboard") %>
               <% end %>
             </li>
-            <li>
-              <%= link_to user_path(current_user) do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
              <li>
               <%= link_to edit_user_path(current_user) do %>
-                <i class="fa fa-cog"></i><%= t(".profile", default: "Edit profile") %>
+                <i class="fa fa-cog"></i><%= t(".profile", default: "Profiel wijzigen") %>
               <% end %>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out"></i><%= t(".sign_out", default: "Uitloggen") %>
               <% end %>
             </li>
           </ul>

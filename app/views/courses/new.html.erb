@@ -2,17 +2,16 @@
   frida - add a course
 <% end %>
 
-<div class="container">
+<div class="lectures-banner-title">
+<p>Jouw curriculum</p>
+  <h2>Maak een nieuwe programma</h2>
+</div>
+<div class="container lecture-form">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <div class="text-center">
-        <h1>Create A Course</h1>
-      </div>
-      <div class="padded">
+    <div class="col-sm-6 col-sm-offset-3">
         <%= render 'form' %>
         <br>
-      <%= link_to "<i class = 'fa fa-chevron-left'></i> Back to Courses".html_safe, courses_path %>
       </div>
-    </div>
   </div>
 </div>
+

@@ -1,15 +1,16 @@
 <%= simple_form_for @course, class: 'form-inline' do |f| %>
-  <%= f.input :name, placeholder: 'What is your course title?' %>
-  <%= f.input :category, collection: ["Portrait", "Landscape", "Conceptual", "Modern", "Traditional", "Cubism", "Expressionism", "Surrealism", "Abstract", "Acryllic", "Sand Painting", "Digital", "Watercolour"], placeholder: 'e.g. portraits, landscapes, etc.' %>
-  <%= f.input :duration, label: 'Duration (in hours)', placeholder: 'How long (in hours) would it take for you to complete the course?' %>
-  <%= f.input :price, placeholder: 'What is the price of your course in £ ?' %>
-  <%= f.input :materials, label: 'Course Materials', placeholder: 'What tools would you need?' %>
-  <%= f.input :description, placeholder: 'How would you describe your course?' %>
-  <%= f.input :difficulty, collection: ["Beginner", "Gemiddeld", "Gevorderd"], placeholder: 'Wat is het niveau?' %>
+  <%= f.input :name, label: "Naam", placeholder: 'Wat is de titel van het programma?' %>
+  <%= f.input :category, label: "Categorie", collection: ["Portrait", "Landscape", "Conceptual", "Modern", "Traditional", "Cubism", "Expressionism", "Surrealism", "Abstract", "Acryllic", "Sand Painting", "Digital", "Watercolour"], placeholder: 'e.g. portraits, landscapes, etc.' %>
+  <%= f.input :duration, label: 'Duur (in uren)', placeholder: 'Hoe lang (in uren) duurt het om het programma te volgen?' %>
+  <%= f.input :price, placeholder: 'Wat is de prijs van het programma in €?' %>
+  <%= f.input :materials, label: 'Materialen', placeholder: 'Welke materialen zijn er nodig?' %>
+  <%= f.input :description, label: "Omschrijving", placeholder: 'Hoe omschrijf je het programma?' %>
+  <%= f.input :difficulty, label: "Niveau", collection: ["Beginner", "Gemiddeld", "Gevorderd"], placeholder: 'Wat is het niveau?' %>
   <div class="input-group">
     <i class="fa fa-upload" aria-hidden="true"></i>
-    <%= f.input :photo, as: :attachinary, label: 'Upload a photo...', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>
+    <p>Upload een inspirerende omslagfoto</p>
+    <%= f.input :photo, as: :attachinary, label: 'Upload een foto...', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>
   </div>
 
-  <%= f.submit "Submit", class: "btn btn-frida" %>
+  <%= f.submit "Opslaan", class: "btn btn-frida" %>
 <% end %>

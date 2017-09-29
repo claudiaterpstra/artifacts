@@ -10,27 +10,29 @@
     <div class="col-lg-3 col-md-4 hide-sm" id="sticky">
       <div class="user-side-bar">
         <div class="user-side-img">
-          <%= unique_image_tag(@user, :width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"fill") %>
+          <%= unique_image_tag(@user, :width=>200, :height=>200, :gravity=>"face", :radius=>"50%", :crop=>"fill") %>
         </div>
-
-      <div class="user-details">
-        <p>Member Since: <%= @user.created_at.strftime("%e %B %Y") %></p>
-        <p><%= link_to "View Public Profile", user_path(@user) %></p>
-      </div>
-
       </div>
     </div>
 
     <div class="col-lg-9 col-md-8 col-sm-12">
       <div class="user-greeting">
-        <h2>What's up, <%= @user.first_name %>!</h2>
-          <h3 class="sentence">You
+        <h2>Hey, <%= @user.first_name %>!</h2>
+          <h3 class="sentence">Je
             <div class="slidingVertical">
-              <span>are awesome.</span>
-              <span>are enrolled on <%= pluralize current_user.participations.count, "course" %>.</span>
-              <span>have unlocked <%= pluralize current_user.badge_count, "badge" %>.</span>
-              <span>have contributed <%= pluralize current_user.course_reviews.count, "review" %>.</span>
-              <span>have uploaded <%= pluralize current_user.artworks.count, "artwork" %>.</span>
+            <% if @user.participations == [] %>
+              <span>bent nog niet ingeschreven voor een programma!</span>
+              <span>hebt <%= pluralize current_user.badge_count, "badge" %> verdiend.</span>
+              <span>hebt <%= pluralize current_user.course_reviews.count, "recensie" %> gegeven.</span>
+              <span>kan hier snel verandering in brengen!</span>
+              <span>kan hiervoor naar Programmas gaan en inschrijven!</span>
+              <% else %>
+              <span>bent goed bezig!</span>
+              <span>wordt een echte Frida!</span>
+              <span>bent ingeschreven voor <%= pluralize current_user.participations.count, "programma" %>.</span>
+              <span>hebt <%= pluralize current_user.badge_count, "badge" %> verdiend.</span>
+              <span>hebt <%= pluralize current_user.course_reviews.count, "recensie" %> gegeven.</span>
+              <% end %>
             </div>
         </h3>
       </div>

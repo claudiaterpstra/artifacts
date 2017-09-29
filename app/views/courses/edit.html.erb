@@ -5,8 +5,12 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
-      <h1>Editing <%= @course.name %></h1>
+      <div class="text-center">
+      <h1>Wijzig <%= @course.name %></h1>
+      </div>
+      <div class="padded">
       <%= render 'form' %>
+      </div>
     </div>
   </div>
 </div>

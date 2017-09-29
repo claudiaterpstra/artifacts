@@ -3,18 +3,18 @@
 <% end %>
 
 <div class="lectures-banner-title">
-  <p>Your Curriculum</p>
-  <h2>Add A Lecture</h2>
+  <p>Jouw Curriculum</p>
+  <h2>Voeg een les toe</h2>
 </div>
 
 <div class="container lecture-form">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <%= simple_form_for [@course, @lecture], class: 'form-inline' do |f| %>
-      <%= f.input :title, placeholder: 'What is your lecture title?' %>
-      <%= f.input :description, placeholder: 'What is your lecture description?' %>
-      <%= f.input :url, placeholder: 'What is the URL of your lecture?' %>
-      <%= f.submit "Submit", class: "btn-frida" %>
+      <%= f.input :title, label: "Titel", placeholder: 'Wat is the titel van deze les?' %>
+      <%= f.input :description, label: "Omschrijving", placeholder: 'Wat is de omschrijving van deze les?' %>
+      <%= f.input :url, placeholder: 'Wat is de link naar de les?' %>
+      <%= f.submit "Opslaan", class: "btn btn-frida" %>
       <% end %>
     </div>
   </div>

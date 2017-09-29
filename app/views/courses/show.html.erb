@@ -30,7 +30,9 @@
           <div class="course-side-btn">
             <% if user_signed_in? %>
               <% if @course.user == current_user %>
-                <%= link_to "Update", edit_course_path(@course), class: "btn btn-frida btn-teacher" %>
+                  <% if @course.published == false %>
+                <%= link_to "Wijzig", edit_course_path(@course), class: "btn btn-frida btn-teacher" %>
+                <% end %>
                 <%= link_to "Verwijder", course_path(@course), method: :delete, class: "btn btn-frida btn-teacher" %>
               <% elsif current_user.participates_to?(@course) && @course.price_pennies > 0  %>
                 Je hebt dit programma gekocht
