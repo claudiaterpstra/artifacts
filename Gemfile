@@ -26,6 +26,7 @@ gem 'cloudinary'
 gem 'attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
+gem 'carrierwave'
 
 # Accepting payments
 gem 'money-rails' #to display price in different currencies

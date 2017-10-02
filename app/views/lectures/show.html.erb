@@ -4,7 +4,7 @@
 
 <div class="lecture-container">
   <div class="lecture-banner">
-    <iframe width="560" height="315" src="<%= @lecture.url %>" frameborder="0" allowfullscreen></iframe>
+  <%= video_tag @lecture.video, :controls => true, :size => "560x315" %>
   </div>
 </div>
 

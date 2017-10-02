@@ -50,6 +50,6 @@ skip_after_action :verify_authorized
   end
 
   def lecture_params
-    params.require(:lecture).permit(:title, :description, :url)
+    params.require(:lecture).permit(:title, :description, :url, :video)
   end
 end

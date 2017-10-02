@@ -18,7 +18,7 @@
     <% if @course.published == false %>
       <%= link_to "Voeg een nieuwe les toe", new_course_lecture_path(@course), class: "btn btn-blue action-link" %>
       <br>
-      <p class="instruction-link">Als je alle lessen hebt toegevoegd kun je het programma publiceren. Je programma wordt zichtbaar voor iedereen en kun je <b><u>niet</u></b> meer wijzigen!</p>
+      <p class="instruction-link">Als je alle lessen hebt toegevoegd kun je het programma publiceren. Je programma wordt zichtbaar voor iedereen en kun je <b>niet</b> meer wijzigen!</p>
       <%= link_to "Publiceer dit programma", course_publish_path(@course), method: :patch, class: "btn btn-blue action-link" %>
       <% else %>
       <p>Dit programma is nu gepubliceerd</p>

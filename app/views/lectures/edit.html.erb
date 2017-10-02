@@ -13,6 +13,7 @@
       <%= f.input :title, label: "Titel" %>
       <%= f.input :description, label: "Omschrijving" %>
       <%= f.input :url %>
+      <%= f.file_field :video%>
       <%= f.submit "Opslaan", class: "btn btn-frida" %>
       <% end %>
       <%= link_to "Terug naar het programma", course_path(@lecture.course)  %>
