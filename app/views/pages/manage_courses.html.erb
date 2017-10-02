@@ -42,16 +42,16 @@
                     </div>
                     <% end %>
                     <div class="course-card-content">
-                      <h3><%= link_to c.name, course_path(c), class: "action-link" %></h3>
+                      <h3><%= link_to c.name, course_path(c), class: "action-links" %></h3>
 
-                      <h4>Je hebt <b><%= pluralize(c.lectures.count, "lecture") %></b> and <b><%= pluralize c.participations.count, "student" %></b> in dit programma.</h4>
+                      <h4>Je hebt <b><%= pluralize(c.lectures.count, "les") %></b> and <b><%= pluralize c.participations.count, "student" %></b> in dit programma.</h4>
 
-                      <h4><b><%= pluralize @user.student_artworks.where(lectures: { course_id: c } ).count, "kunstwerk" %></b> <%= @user.student_artworks.where(lectures: { course_id: c } ).count == 1 ? 'is' : 'are' %> geupload voor dit programma.</h4>
+                      <h4><b><%= pluralize @user.student_artworks.where(lectures: { course_id: c } ).count, "kunstwerk" %></b> <%= @user.student_artworks.where(lectures: { course_id: c } ).count == 1 ? 'is' : 'zijn' %> geupload voor dit programma.</h4>
                       <hr>
                       <div class="course-card-links">
-                        <p><%= link_to "Wijzig programma", edit_course_path(c), class: "action-link" %></p>
-                        <p><%= link_to "Voeg een les toe", new_course_lecture_path(c), class: "action-link" %></p>
-                        <p><%= link_to "Geef feedback", give_feedback_path, class: "action-link"  %></p>
+                        <p><%= link_to "Wijzig programma", edit_course_path(c), class: "action-links" %></p>
+                        <p><%= link_to "Voeg een les toe", new_course_lecture_path(c), class: "action-links" %></p>
+                        <p><%= link_to "Geef feedback", give_feedback_path, class: "action-links"  %></p>
                       </div>
                     </div>
                 </div>

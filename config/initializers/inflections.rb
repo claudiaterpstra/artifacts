@@ -19,4 +19,5 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.plural 'student', 'studenten'
   inflect.plural 'kunstwerk', 'kunstwerken'
   inflect.plural 'programma', 'programmas'
+  inflect.irregular 'les', 'lessen'
 end
