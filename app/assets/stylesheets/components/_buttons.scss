@@ -40,6 +40,21 @@ padding: 10px 30px;
   }
 }
 
+.upload_video_button {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 1px;
+  color: white;
+  background-color: #0f418c;
+  padding: 20px 32px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 0px;
+    &:hover {
+      color: $frida-white;
+    }
+}
+
 .search-button {
   background-color: $frida-red;
   color: $frida-white;
@@ -91,5 +106,9 @@ padding: 10px 30px;
 .lecture-button {
   padding: 7px 75px;
   margin-left: 0px;
+}
+
+.button-button-text {
+  margin: 0;
 }
 

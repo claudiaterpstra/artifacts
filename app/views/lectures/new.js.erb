@@ -1,0 +1,3 @@
+$(document).on 'change', '#lecture_video' {
+  $('.new_video_upload').html($('#lecture_video').val().replace(/^.*[\\\/]/, ''))
+}
