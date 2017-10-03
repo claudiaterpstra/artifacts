@@ -13,6 +13,8 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 require "attachinary/orm/active_record"
 
+
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -21,6 +23,7 @@ module Frida
   class Application < Rails::Application
     # config.assets.paths << "#{Rails.root/app/assets/videos}"
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    config.i18n.default_locale = :nl
     config.generators do |generate|
       generate.assets false
       generate.helper false

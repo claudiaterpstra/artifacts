@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
+skip_before_action :authenticate_user!, only: [:index, :show, :destroy]
 before_action :set_course, only: [:show, :edit, :update, :destroy]
   def index
     @courses = policy_scope(Course).order(created_at: :desc)
@@ -55,7 +55,6 @@ before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   def destroy
     @course.destroy
-    redirect_to artistdashboard_path
   end
 
   private

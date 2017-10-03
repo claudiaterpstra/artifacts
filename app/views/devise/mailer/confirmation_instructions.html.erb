@@ -1,6 +1,6 @@
 <p>Welkom <%= @user.first_name %>!</p>
 
-<p>Bevestig je account door op deze link te klikken</p>
+<p>Bevestig je account door op deze link te klikken. Je kan dan gelijk inloggen!</p>
 
 <p><%= link_to 'Bevestig mijn account', confirmation_url(@resource, confirmation_token: @token) %></p>
 

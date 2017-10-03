@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+
+errors:
+  messages:
+    taken: "dit emailadres is al in gebruik"
