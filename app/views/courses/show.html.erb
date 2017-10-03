@@ -184,5 +184,7 @@
 
 <% content_for :meta_title, @course.name %>
 <% content_for :meta_description, @course.description %>
+<% if @course.photo %>
 <% content_for :meta_image, cloudinary_url(@course.photo.path) %>
+<% end %>
 
