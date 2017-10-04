@@ -203,14 +203,14 @@ video {
 .card-home2:hover {
   img {
     transition: 0.8s;
-    opacity:0.2;
+    opacity:0.15;
     background-color: white;
   }
   .card-9:after {
     position: absolute;
     left: 6px;
     top: 72px;
-    color: $frida-red;
+    color: #568EA3;
     font-size: 35px;
     content: "YOURSELF";
   }
