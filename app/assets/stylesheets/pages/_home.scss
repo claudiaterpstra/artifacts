@@ -213,7 +213,6 @@ video {
     color: $frida-red;
     font-size: 35px;
     content: "YOURSELF";
-    font-style: bold;
   }
 }
 .card-9 img {
@@ -307,5 +306,10 @@ video {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+}
+
+.courses_link {
+  text-decoration: none;
+  color: $frida-red;
 }
 

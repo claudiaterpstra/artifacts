@@ -3,7 +3,7 @@
     <div class="banner-content">
       <h1>de online creatieve studio</h1>
       <p>schilderen is voor iedereen, ook voor jou!</p>
-      <input type="button", id="button-home-page", class="btn btn-frida", value="Hoe werkt het?"/>
+      <input type="button", id="button-home-page", class="btn btn-blue", value="Hoe werkt het?"/>
     </div>
   </div>
 </div>
@@ -34,7 +34,13 @@
         </span>
         Kies uit het aanbod van programmas</h3>
         <p>Kies uit verschillende categorien het programma wat het beste bij jou past.
-        We hebben programmas voor beginners en voor meer gevorderden.</p>
+        We hebben programmas voor beginners en voor meer gevorderden. Let op de
+        <i class="fa fa-paint-brush" aria-hidden="true"></i>
+        <i class="fa fa-paint-brush" aria-hidden="true"></i>
+        <i class="fa fa-paint-brush" aria-hidden="true"></i>
+        voordat je een programma kiest.
+        </p>
+        <%= link_to "Ga naar alle programmas", courses_path, class: "courses_link"  %>
         </div>
       </div>
     </div>
@@ -48,7 +54,8 @@
         </span>
         Volg de eerste les en neem foto's van je kunstwerk</h3>
         <p>Start de video en volg de instructies van de artiest. Neem geregeld foto's van je
-        kunstwerk zodat wij met je mee kunnen kijken. Deze kun je dan later (of tijdens de les) uploaden en versturen naar je studio. Zet gerust de video af en toe stil, neem de tijd om alles zo goed mogelijk op te nemen! </p>
+        kunstwerk zodat de artiest later met je mee kan kijken. Deze kun je dan later (of tijdens de les) uploaden en versturen naar je studio. Zet gerust de video af en toe stil, neem de tijd om alles zo goed mogelijk op te nemen! </p>
+        <br>
         </div>
       </div>
     </div>
@@ -59,13 +66,13 @@
           <i class="fa fa-circle fa-stack-2x"></i>
           <strong class="fa-stack-1x calendar-text">3</strong>
         </span>
-        Ga naar je studio en vraag feedback</h3>
+        Ga naar je studio en chat met je artiest</h3>
         <p>In je studio kan je om specifieke feedback vragen. Je kan precies aangeven waar je moeite mee had of waar je hulp nodig hebt. Stuur een berichtje naar de artiest en leer nog veel meer!  </p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="instruction-card2">
-        <video width="500" height="300" autoplay loop>
+        <video width="400" height="240" autoplay loop>
           <source src: url(<%= video_tag("http://res.cloudinary.com/do6jihcuc/video/upload/v1506440331/frida_trimmed7_tm9abs.mov")%>
         </video>
         </div>
