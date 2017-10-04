@@ -19,8 +19,7 @@
   <%= simple_form_for @user, class: 'form-inline' do |f| %>
     <%= f.input :first_name, label: "Voornaam" %>
     <%= f.input :last_name, label: "Achternaam" %>
-    <%= f.input :email, "E-mailadres" %>
-    <%= f.input :biodata, label: 'Bio' %>
+    <%= f.input :email, label: "E-mailadres" %>
     <div class="input-group">
       <i class="fa fa-upload" aria-hidden="true"></i>
     <%= f.input :photo, as: :attachinary, label: 'Upload een foto', input_html: { class: 'course_photo_upload' }, label_html: { class: 'course_photo_upload_label' } %>

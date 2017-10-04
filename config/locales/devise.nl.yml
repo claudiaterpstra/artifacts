@@ -1,7 +1,7 @@
 nl:
   devise:
     confirmations:
-      confirmed: "Uw e-mailadres is bevestigd."
+      confirmed: "Je e-mailadres is bevestigd. Je kunt nu inloggen."
       send_instructions: "U ontvangt binnen enkele minuten via e-mail instructies om uw account te bevestigen."
       send_paranoid_instructions: "Als uw e-mailadres bestaat in de database, ontvangt u binnen enkele minuten via e-mail instructies om uw account te bevestigen."
     failure:
@@ -30,10 +30,10 @@ nl:
       success: ""
     passwords:
       no_token: "U kunt deze pagina enkel benaderen vanuit een wachtwoord-reset-e-mail. Als u vanuit zo'n e-mail komt, vergewis u er dan van dat u de volledige URL gebruikt hebt."
-      send_instructions: "U ontvangt via e-mail instructies om uw wachtwoord te resetten."
+      send_instructions: "Je ontvangt via e-mail instructies om je wachtwoord te resetten."
       send_paranoid_instructions: "Als uw e-mailadres bij ons bekend is, ontvangt u binnen enkele minuten via e-mail instructies om een nieuw wachtwoord in te stellen."
-      updated: "Uw wachtwoord is gewijzigd. U bent nu ingelogd."
-      updated_not_active: "Uw wachtwoord is gewijzigd."
+      updated: "Je wachtwoord is gewijzigd. Je bent nu ingelogd."
+      updated_not_active: "Je wachtwoord is gewijzigd."
     registrations:
       destroyed: "Uw account is verwijderd."
       signed_up: "Welkom! U bent inschreven."

@@ -10,7 +10,7 @@
     <div class="col-lg-3 col-md-4 hide-sm" id="sticky">
       <div class="user-side-bar">
         <div class="user-side-img">
-          <%= unique_image_tag(@user, :width=>200, :height=>200, :gravity=>"face", :radius=>"50%", :crop=>"fill") %>
+          <%= cl_image_tag(@user.photo.path, width: 200, height: 200, gravity: :face, crop: :fill) %>
         </div>
       </div>
     </div>
