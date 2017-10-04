@@ -13,7 +13,7 @@
     <% if user_signed_in? %>
     <% current_user.participations.each do |participation| %>
     <% if participation.course == @course %>
-    <input type="button", id="button", class="btn btn-frida", value="Ga naar lessen"/>
+    <input type="button", id="button", class="btn btn-frida", value="Start de lessen"/>
     <% end %>
     <% end %>
     <% end %>

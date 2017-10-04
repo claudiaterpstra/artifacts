@@ -51,7 +51,7 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:artwork_id])
     @artwork.featured = true
     @artwork.save
-    redirect_to user_path(@artwork.user)
+    redirect_to dashboard_path(@artwork.user)
   end
 
   def unfeature

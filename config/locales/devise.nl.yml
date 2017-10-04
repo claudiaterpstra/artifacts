@@ -39,7 +39,7 @@ nl:
       signed_up: "Welkom! U bent inschreven."
       signed_up_but_inactive: "U bent inschreven. U kon nog niet ingelogd worden, omdat uw account nog niet geactiveerd is."
       signed_up_but_locked: "U bent inschreven. U kon nog niet ingelogd worden, omdat uw account vergrendeld is."
-      signed_up_but_unconfirmed: "U ontvangt via e-mail instructies om uw account te activeren. Volg de link in de mail om uw account te activeren."
+      signed_up_but_unconfirmed: "Je ontvangt via e-mail instructies om je account te activeren. Volg de link in de mail om je account te activeren."
       update_needs_confirmation: "U hebt uw e-mailadres succesvol gewijzigd, maar we moeten uw nieuwe e-mailadres nog verifiëren. Controleer uw e-mail en volg de link in de mail om uw adres te verifiëren."
       updated: "Uw accountgegevens zijn opgeslagen."
     sessions:

@@ -10,7 +10,13 @@
     <div class="col-lg-3 col-md-4 hide-sm" id="sticky">
       <div class="user-side-bar">
         <div class="user-side-img">
+          <% if @user.facebook_picture_url %>
+          <%= unique_image_tag(@user, :width=>200, :height=>200, :gravity=>"face", :radius=>"max", :crop=>"fill") %>
+          <% elsif @user.photo != nil %>
           <%= cl_image_tag(@user.photo.path, width: 200, height: 200, gravity: :face, crop: :fill) %>
+          <% else %>
+          <% unique_image_tag (current_user) %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -28,10 +34,10 @@
               <span>kan hiervoor naar Programmas gaan en inschrijven!</span>
               <% else %>
               <span>bent goed bezig!</span>
-              <span>wordt een echte Frida!</span>
-              <span>bent ingeschreven voor <%= pluralize current_user.participations.count, "programma" %>.</span>
-              <span>hebt <%= pluralize current_user.badge_count, "badge" %> verdiend.</span>
-              <span>hebt <%= pluralize current_user.course_reviews.count, "recensie" %> gegeven.</span>
+              <span>wordt een echte artiest!</span>
+              <span>bent ingeschreven voor <%= pluralize current_user.participations.count, "programma" %></span>
+              <span>hebt <%= pluralize current_user.badge_count, "badge" %> verdiend</span>
+              <span>hebt <%= pluralize current_user.course_reviews.count, "recensie" %> gegeven</span>
               <% end %>
             </div>
         </h3>

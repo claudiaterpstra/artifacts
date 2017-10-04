@@ -12,8 +12,10 @@
       <%= simple_form_for @lecture, class: 'form-inline' do |f| %>
       <%= f.input :title, label: "Titel" %>
       <%= f.input :description, label: "Omschrijving" %>
-      <%= f.input :url %>
       <%= f.file_field :video%>
+       <p class="button-button-text"><button type="button" class="btn upload_video_button" onclick="document.getElementById('lecture_video').click();"><p class="button-button-text"> Upload een video </p></button>
+      <span class="new_video_upload"></span>
+       <br>
       <%= f.submit "Opslaan", class: "btn btn-frida" %>
       <% end %>
       <%= link_to "Terug naar het programma", course_path(@lecture.course)  %>

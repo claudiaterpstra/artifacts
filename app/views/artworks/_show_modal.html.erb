@@ -1,7 +1,11 @@
 <% image_url = artwork.photo ? artwork.photo.path : "sample" %>
 <div class="studio-uploads" style="background-image: url('<%= cl_image_path image_url, width: 200, height: 300, crop: :fill %>')">
   <div class="studio-upload-img" data-toggle="modal" data-target="#artwork-<%= artwork.id %>">
-    <span class="tooltiptext invisible">Add/View Feedback</span>
+  <% if current_user.teacher == true %>
+    <span class="tooltiptext invisible">Chat met je studenten</span>
+    <% else %>
+    <span class="tooltiptext invisible">Chat met je instructeur</span>
+    <% end %>
   </div>
 </div>
 
@@ -66,11 +70,11 @@
 
         <%= simple_form_for [artwork, feedback], remote: true, class: 'form-inline' do |f| %>
         <%= f.input :content, label: 'Feedback', as: :text, input_html: {class: "feedback-input"} %>
-        <%= f.submit "Send Message", class: "btn btn-frida" %>
+        <%= f.submit "Verstuur bericht", class: "btn btn-frida" %>
         <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-frida btn-frida-close" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-frida btn-frida-close" data-dismiss="modal">Sluiten</button>
       </div>
     </div>
   </div>

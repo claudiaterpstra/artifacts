@@ -11,6 +11,8 @@
           <div class="content-block block-skin-grey clearfix">
             <h2 class="content-block-title"><%= lecture.title %></h2>
               <p><%= lecture.description %></p>
+              <%= link_to "Bekijk deze les", lecture_path(lecture) %>
+              <br>
               <%= link_to "Wijzig deze les", edit_lecture_path(lecture) %>
               <br>
               <%= link_to "Verwijder deze les", lecture_path(lecture), method: :delete %>
