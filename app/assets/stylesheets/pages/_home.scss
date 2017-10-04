@@ -142,3 +142,147 @@ video {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.card-home {
+  height: 200px;
+  width: 200px;
+  background-size: cover !important;
+  background-position: center center;
+  position: relative;
+  margin-right: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  img {
+    height: 200px;
+    width: 200px;
+  }
+  i {
+    position: absolute;
+    font-size: 70px;
+    left: 60px;
+    top: 60px;
+    color: $frida-red;
+  }
+}
+
+.card-1 {
+  position: absolute;
+  font-size: 15px;
+  left: 30px;
+  right: 20px;
+  top: 50px;
+  color: black;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.card-3 {
+  position: absolute;
+  font-size: 15px;
+  left: 30px;
+  right: 20px;
+  top: 70px;
+  color: black;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.card-9 {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin-right: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  img {
+    position: absolute;
+    left: 20px;
+    top: 65px;
+
+  }
+}
+
+.card-home:hover {
+  img, i {
+  transition: 0.8s;
+  opacity:0.2;
+  background-color: white;
+  }
+  .frida-selfie:after {
+  transition: 0.8s;
+  position: absolute;
+  left: 30px;
+  right: 20px;
+  top: 30px;
+  content: 'Frida Kahlo was een Mexicaanse surrealistische kunstschilderes. Ze was zelfbewust, radicaal en eigenzinnig.';
+  color: black;
+  font-size: 15px;
+  }
+  .card-2:after {
+    position: absolute;
+    left: 30px;
+    right: 20px;
+    top: 50px;
+    color: black;
+    font-size: 15px;
+    content: "In onze studio kun je leren schilderen in je eigen tijd en op je eigen tempo!"
+  }
+  .card-4:after {
+    position: absolute;
+    left: 30px;
+    right: 20px;
+    top: 50px;
+    color: black;
+    font-size: 15px;
+    content: "Elk goed schilderij begint met een goede schets. Deze lessen hebben wij ook!"
+  }
+  .card-7:after {
+    position: absolute;
+    left: 30px;
+    right: 20px;
+    top: 40px;
+    color: black;
+    font-size: 15px;
+    content: "Je schetst of schildert tijdens de video les van de artiest. Terug spoelen, nog een keer kijken, het kan allemaal!"
+  }
+  .card-8:after {
+    position: absolute;
+    left: 30px;
+    right: 20px;
+    top: 50px;
+    color: black;
+    font-size: 15px;
+    content: "Neem foto's van jouw kunstwerken zodat je artiest je verder kan helpen!"
+  }
+}
+
+.card-6 {
+    font-size: 35px;
+    position: absolute;
+    top: 72px;
+    left: 35px;
+}
+
+.link-vice {
+  text-decoration: underline;
+  color: black;
+  font-size: 10px;
+}
+
+.flexbox-cards {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-row-2 {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-row-3 {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
