@@ -18,6 +18,10 @@ class CourseReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @course_review.destroy
+  end
+
   private
   def set_course
     @course = Course.find(params[:course_id])

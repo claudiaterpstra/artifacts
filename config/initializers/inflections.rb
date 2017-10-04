@@ -15,9 +15,11 @@
 #   inflect.acronym 'RESTful'
 # end
 
-ActiveSupport::Inflector.inflections do |inflect|
+ActiveSupport::Inflector.inflections (:nl) do |inflect|
   inflect.plural 'student', 'studenten'
   inflect.plural 'kunstwerk', 'kunstwerken'
   inflect.plural 'programma', 'programmas'
   inflect.irregular 'les', 'lessen'
+  inflect.irregular 'badge', 'badges'
+  inflect.irregular 'recensie', 'recensies'
 end
