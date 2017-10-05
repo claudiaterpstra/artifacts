@@ -12,7 +12,10 @@ Rails.application.configure do
     port:          '587',
     authentication: :plain,
     enable_starttls_auto: true
+    :openssl_verify_mode  => 'none'
   }
+
+
 
   config.action_mailer.default_options = { from: "terpstra.claudia@gmail.com" }
 
