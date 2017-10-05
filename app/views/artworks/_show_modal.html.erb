@@ -2,9 +2,9 @@
 <div class="studio-uploads" style="background-image: url('<%= cl_image_path image_url, width: 200, height: 300, crop: :fill %>')">
   <div class="studio-upload-img" data-toggle="modal" data-target="#artwork-<%= artwork.id %>">
   <% if current_user.teacher == true %>
-    <span class="tooltiptext invisible">Chat met je studenten</span>
+    <span class="tooltiptext invisible">Stuur een berichtje</span>
     <% else %>
-    <span class="tooltiptext invisible">Chat met je instructeur</span>
+    <span class="tooltiptext invisible">Stuur een berichtje</span>
     <% end %>
   </div>
 </div>
@@ -14,7 +14,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Kunstwerk van: <%= artwork.user.full_name %></h4>
+        <!-- <h4 class="modal-title" id="myModalLabel">Kunstwerk van: <%= artwork.user.full_name %></h4> -->
       </div>
       <div class="modal-body">
         <div class="modal-heading">
@@ -31,14 +31,15 @@
 
         <br>
         <h4>Titel: <%= artwork.message %></h4>
-          <% if artwork.user == current_user %>
+        <p class="featured-text">Vergeet niet om pins te zetten op je kunstwerk!</p>
+        <!--   <% if artwork.user == current_user %>
             <% if artwork.featured %>
             <h4><i class="fa fa-star" id="featured-star"></i>Featured on your Profile Page</h4>
               <h4 class="featured-text"><%= link_to 'Klik hier om dit kunstwerk te verwijderen van je profiel pagina'.html_safe, artwork_unfeature_path(artwork), method: :patch %></h4>
             <% else %>
               <h4 class="featured-text"><%= link_to '<i class="fa fa-star-o" id="featured-star-o"></i> Klik hier om dit kunstwerk op je profiel pagina te zetten'.html_safe, artwork_feature_path(artwork), method: :patch %></h4>
             <% end %>
-          <% end %>
+          <% end %> -->
           </div>
         <hr>
 
