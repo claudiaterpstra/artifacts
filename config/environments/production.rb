@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "https://secure-citadel-77801.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "secure-citadel-77801.herokuapp.com" }
   # Settings specified here will take precedence over those in config/application.rb.
    config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
