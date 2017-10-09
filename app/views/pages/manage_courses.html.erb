@@ -29,7 +29,7 @@
     </div>
       <div class="col-lg-9 col-md-8 col-sm-12">
         <h2>Beheer jouw programmas</h2>
-        <h4>Hey <%= @user.first_name %>! Beheer al je programmas hier. Bekijk het werk van je studenten en geef ze feedback. Heb je nog veel meer kennis die je wilt delen? Maak een nieuw programma aan!</h4>
+        <h4>Hey <%= @user.first_name %>! Beheer al je programmas hier. Bekijk het werk van je studenten en geef ze feedback. Heb je nog veel meer kennis die je wilt delen? Maak dan een nieuw programma aan!</h4>
           <div class="hr-medium">
             <hr>
           </div>
@@ -42,7 +42,7 @@
                     </div>
                     <% end %>
                     <div class="course-card-content">
-                      <h3><%= link_to c.name, course_path(c), class: "action-links" %></h3>
+                      <h3><%= link_to c.name, course_path(c), class: "title-link" %></h3>
 
                       <h4>Je hebt <b><%= pluralize(c.lectures.count, "les") %></b> and <b><%= pluralize c.participations.count, "student" %></b> in dit programma.</h4>
 

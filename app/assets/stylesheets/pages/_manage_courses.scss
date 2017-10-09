@@ -75,5 +75,11 @@ h4 {
 
 .action-links {
   text-decoration: none;
-  color: #26547C;
+  color: $frida-red;
+  font-size: 15px;
+}
+
+.title-link {
+  text-decoration: none;
+  color: black;
 }

@@ -33,29 +33,17 @@
   z-index: -1;
 }
 
-.wrapper-grey-cards {
-  background-color: #f9f9f9;
-  text-align: center;
- }
-
 video {
   margin-top: 55px;
   margin-right: 30px;
   box-shadow: 5px;
 }
 
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-
 .first-instruction-card {
-  margin-top: 95px;
+  margin-top: 50px;
   p {
     font-size: 15px;
+    font-weight: lighter;
   }
 }
 
@@ -67,6 +55,7 @@ video {
   }
   p {
     font-size: 15px;
+    font-weight: lighter;
   }
 }
 
@@ -78,6 +67,7 @@ video {
   }
   p {
     font-size: 15px;
+    font-weight: lighter;
   }
 }
 
@@ -114,6 +104,11 @@ video {
   }
 }
 
+#white-title {
+  margin-top: 50px;
+  text-align: center;
+}
+
 .white-paragraph {
   text-align: center;
   padding-top: 100px;
@@ -135,7 +130,7 @@ video {
 
 .wrapper-grey2 {
   background-color: #f9f9f9;
-  height: 90vh;
+  height: 95vh;
 }
 
 .paragraph {
@@ -318,5 +313,66 @@ video {
   font-weight: lighter;
   margin-top: 150px;
   margin-left: 100px;
+  font-size: 15px;
+}
+
+.downArrow{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  color: $frida-red;
+}
+.bounce {
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
 

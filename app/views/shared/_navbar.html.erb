@@ -15,6 +15,10 @@
     <!-- About link -->
     <%= link_to "Over Frida", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
+    <% if user_signed_in? && current_user.teacher == false  %>
+    <%= link_to "Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
+
     <!-- Courses link -->
     <%= link_to "Programmas", courses_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
