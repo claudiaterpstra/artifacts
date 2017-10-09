@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :participations, dependent: :destroy
   # has_many :courses, thorough: :participations    ---- CONNECTED TO METHOD THAT CONNECTS USERS TO COURSE PARTICIPATION BELOW
   has_many :courses_participated, -> { distinct }, through: :participations, source: :course
-  has_many :lectures_participated, -> { distinct }, through: :courses_participated, source: :lecture
+  # has_many :lectures_participated, -> { distinct }, through: :courses_participated, source: :lecture
   has_many :feedbacks, :class_name => "Feedback", :foreign_key => "author_id"
   has_many :course_reviews, dependent: :destroy
   has_many :artworks
