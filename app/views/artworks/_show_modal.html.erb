@@ -2,9 +2,9 @@
 <div class="studio-uploads" style="background-image: url('<%= cl_image_path image_url, width: 200, height: 300, crop: :fill %>')">
   <div class="studio-upload-img" data-toggle="modal" data-target="#artwork-<%= artwork.id %>">
   <% if current_user.teacher == true %>
-    <span class="tooltiptext invisible">Stuur een berichtje</span>
+    <span class="tooltiptext invisible">Bekijk dit kunstwerk</span>
     <% else %>
-    <span class="tooltiptext invisible">Stuur een berichtje</span>
+    <span class="tooltiptext invisible">Bekijk dit kunstwerk</span>
     <% end %>
   </div>
 </div>
@@ -14,7 +14,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <!-- <h4 class="modal-title" id="myModalLabel">Kunstwerk van: <%= artwork.user.full_name %></h4> -->
+        <h4 class="modal-title" id="myModalLabel">Kunstwerk van: <%= artwork.user.full_name %></h4>
       </div>
       <div class="modal-body">
         <div class="modal-heading">
