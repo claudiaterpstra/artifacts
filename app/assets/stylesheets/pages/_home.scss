@@ -97,7 +97,6 @@ video {
 }
 
 .wrapper-white {
-  background-color: white;
   h3 {
     text-align: center;
     margin-top: 50px;
@@ -150,6 +149,7 @@ video {
   width: 200px;
   background-size: cover !important;
   background-position: center center;
+  background-color: white;
   position: relative;
   margin-right: 5px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -196,6 +196,7 @@ video {
   position: relative;
   margin-right: 5px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background-color: white;
 }
 
 .card-home2:hover {
