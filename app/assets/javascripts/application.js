@@ -5,6 +5,12 @@
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
-//= require_tree .
-
-
+//= require cable
+//= require init_attachinary
+//= require init_jquery_slick
+//= require jquery.fullPage
+//= require lectures_tabs
+//= require scroll_button
+//= require stickydiv
+//= require tabs
+//= require wow

@@ -104,6 +104,13 @@ video {
   }
 }
 
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
 #white-title {
   margin-top: 50px;
   text-align: center;
