@@ -36,9 +36,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update]
 
-  resources :orders, only: [:show, :create] do
-    resources :payments, only: [:new, :create]
-  end
-
  ActiveAdmin.routes(self)
 end

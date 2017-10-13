@@ -25,7 +25,7 @@
     <div class="col-lg-3 col-md-4 hide-sm" id="sticky">
       <div class="course-side-bar">
         <div class="course-side-info">
-          <h3>Prijs: <%= humanized_money_with_symbol(@course.price) %></h3>
+          <h3>Prijs:<%= @course.price_pennies %></h3>
           <p><%= @course.duration %> uur aan videos </p>
           <div class="course-side-btn">
             <% if user_signed_in? %>

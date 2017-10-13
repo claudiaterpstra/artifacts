@@ -28,10 +28,6 @@ gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 gem 'carrierwave'
 
-# Accepting payments
-gem 'money-rails' #to display price in different currencies
-gem 'stripe' #accept payments
-
 #StripAttributes
 gem "strip_attributes"
 

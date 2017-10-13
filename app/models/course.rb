@@ -10,7 +10,6 @@ class Course < ApplicationRecord
   has_many :students, through: :participations, source: :user
 
   has_attachment :photo
-  monetize :price_pennies
 
   validates :name, presence: :true
   validates :category, presence: :true

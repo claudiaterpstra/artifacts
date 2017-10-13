@@ -37,7 +37,7 @@
             Gevorderd</p>
           <% end %>
           <p>Artiest: <%= course.user.full_name %></p>
-          <p>Prijs: <%= humanized_money_with_symbol(course.price) %></p>
+          <p>Prijs: <%= course.price_pennies %></p>
           <div class="course-rating">
           <p>
           <% if course.course_reviews == [] %>
