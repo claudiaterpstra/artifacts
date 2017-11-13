@@ -14,7 +14,7 @@ class Course < ApplicationRecord
   validates :name, presence: :true
   validates :category, presence: :true
   validates :description, presence: :true
-  validates :price, presence: :true
+  validates :price_pennies, presence: :true
 
   def average_rating
     if course_reviews.count > 0

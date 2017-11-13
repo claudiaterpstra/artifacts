@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
+git_source(:github) { |name| "https://github.com/#{name}.git" }
+
 gem 'rails', '5.0.3'
 gem 'puma'
 gem 'pg'

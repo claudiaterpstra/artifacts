@@ -32,8 +32,8 @@
               <% if @course.user == current_user %>
                   <% if @course.published == false %>
                 <%= link_to "Wijzig", edit_course_path(@course), class: "btn btn-frida btn-teacher" %>
+                 <%= link_to "Verwijder", course_path(@course), method: :delete, class: "btn btn-frida btn-teacher" %>
                 <% end %>
-                <%= link_to "Verwijder", course_path(@course), method: :delete, class: "btn btn-frida btn-teacher" %>
               <% elsif current_user.participates_to?(@course) && @course.price_pennies > 0  %>
                 Je hebt dit programma gekocht
               <% elsif current_user.participates_to?(@course) && @course.price_pennies.zero?  %>

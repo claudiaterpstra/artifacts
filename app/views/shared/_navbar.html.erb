@@ -1,4 +1,4 @@
-<div class="navbar-wagon <%= params[:action] == "home" ? "nav-absolute" : "" %> <%= "navbar-fixed" if params[:action] == "about" %> <%= yield(:navbar) %>">
+<div class="navbar-wagon <%= params[:action] == "home" ? "nav-absolute" : "" %> <%= "navbar-absolute" if params[:action] == "about" %> <%= yield(:navbar) %>">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
       <%= image_tag "logo.png" %>
@@ -13,7 +13,7 @@
   <% end %>
 
     <!-- About link -->
-    <%= link_to "Over Frida", about_path, class: "navbar-wagon-item navbar-wagon-link" %>
+   <!--  <%= link_to "Over Frida", about_path, class: "navbar-wagon-item navbar-wagon-link" %> -->
 
     <% if user_signed_in? && current_user.teacher == false  %>
     <%= link_to "Dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
