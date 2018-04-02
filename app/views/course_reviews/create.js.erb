@@ -1,6 +1,6 @@
   <% if @course_review.errors.any? %>
   // Render new review form with errors
-  $('#new_courseoverview').html("<%= j render 'course_overview/form', course: @course %>");
+  $('#new_course_review').html("<%= j render 'course_review/form', course: @course %>");
   <% else %>
   // Create a paragraph for the new review. But hide it.
   var new_course_review = $("<%= j render 'course_reviews/show', course_review: @course_review %>").hide();
